@@ -16,9 +16,14 @@ SYNOPSIS
     linkss [options]
 
 OPTIONS
-    -l  list existing commands
-    -a  add/modify existing commands
-    -d  delete existing command
+    -h, --help
+        show help
+    -l  --list
+        list existing commands
+    -a  --add
+        add/modify existing commands
+    -d  --delete
+        delete existing command
 """
 }
 
