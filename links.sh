@@ -51,8 +51,8 @@ delLink() {
 	do
 		read -p "Enter url : " url
 	done
-    grep -v "^$url," "$HOME/.linkss/links.txt" > "$HOME/.linkss/links.txt"
-    grep -v "{ open \"$url\"; }$" "$HOME/.linkss/.links" > "$HOME/.linkss/.links"
+    echo $(grep -v "^$url," "$HOME/.linkss/links.txt") > "$HOME/.linkss/links.txt"
+    echo $(grep -v "{ open \"$url\"; }$" "$HOME/.linkss/.links") > "$HOME/.linkss/.links"
     echo "url $url removed successfully"
 }
 
@@ -121,8 +121,8 @@ linkss () {
             if [[ "$sName" == "" ]]; then
                 return
             fi
-            grep -v "^$url," "$linksTxtPath" > "$linksTxtPath"
-            grep -v "^$currsName ()" "$linksCommandsPath" > "$linksCommandsPath"
+            echo $(grep -v "^$url," "$linksTxtPath") > "$linksTxtPath"
+            echo $(grep -v "^$currsName ()" "$linksCommandsPath") > "$linksCommandsPath"
             action="updated"
         else
             action="added"
