@@ -20,4 +20,3 @@ $linksSourceLins
 """ >> "$bashProfilePath"
 fi
 echo "linkss installed successfuly"
-echo
